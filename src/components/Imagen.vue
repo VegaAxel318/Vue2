@@ -15,13 +15,17 @@
       Wowie Zowie
     </v-card-title>
 
+    <v-card-subtitle>
+      1,000 miles of wonder
+    </v-card-subtitle>
+
     <v-card-actions>
       <v-btn
-        color="green-lighten-2"
+        color="orange-lighten-2"
         variant="text"
         @click = "cambiarImagen"
       >
-        Reload
+        Explore
       </v-btn>
 
       <v-spacer></v-spacer>

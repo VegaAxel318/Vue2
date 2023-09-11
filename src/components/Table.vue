@@ -16,7 +16,7 @@
       </thead>
       <tbody>
         <tr
-          v-for="item in creadores"
+          v-for="item in dataFull"
           :key="item.userId"
         >
           <td>{{ item.Autor }}</td>
@@ -32,7 +32,7 @@ import { ref, onMounted } from 'vue';
 
 const urlPosts = "https://jsonplaceholder.typicode.com/posts";
 const urlAutores = "https://jsonplaceholder.typicode.com/users";
-const creadores = ref([]);
+const dataFull = ref([]);
 
 onMounted(async () =>
 {
@@ -52,7 +52,7 @@ onMounted(async () =>
         Titulo: post.title,
         Post: post.body};
     });
-    creadores.value = mergedData;
+    dataFull.value = mergedData;
   }
   catch (error)
   {
